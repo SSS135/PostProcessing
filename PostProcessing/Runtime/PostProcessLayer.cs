@@ -517,7 +517,7 @@ namespace UnityEngine.Rendering.PostProcessing
         void BuildCommandBuffers()
         {
             var context = m_CurrentContext;
-            var sourceFormat = m_Camera.allowHDR ? RuntimeUtilities.defaultHDRRenderTextureFormat : RenderTextureFormat.Default;
+            var sourceFormat = m_Camera.allowHDR ? RenderTextureFormat.ARGBHalf : RenderTextureFormat.Default;
 
             if (!RuntimeUtilities.isFloatingPointFormat(sourceFormat))
                 m_NaNKilled = true;
